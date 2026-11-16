@@ -1,0 +1,117 @@
+name: Bug report
+description: Something isn't working in Conduit
+title: "[Bug]: "
+labels: ["bug", "beta"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing Conduit! The more detail you give, the faster it gets fixed.
+        **Please attach your log file** — it's the single most useful thing you can send.
+
+  - type: input
+    id: version
+    attributes:
+      label: Conduit version
+      description: Shown in Help → About.
+      placeholder: e.g. 0.9.0-beta.1
+    validations:
+      required: true
+
+  - type: dropdown
+    id: windows
+    attributes:
+      label: Windows version
+      options:
+        - Windows 11
+        - Windows 10
+        - Other (please say below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: hardware
+    attributes:
+      label: DJ hardware
+      description: Player models, mixer model, and how many players are linked.
+      placeholder: e.g. 2× CDJ-3000, DJM-900NXS2
+    validations:
+      required: true
+
+  - type: dropdown
+    id: network
+    attributes:
+      label: How is your computer connected to the players?
+      options:
+        - Ethernet cable straight into a player or mixer
+        - Through a network switch
+        - Through a router / Wi-Fi
+        - Not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: osc-target
+    attributes:
+      label: Where is Conduit sending OSC (Open Sound Control) data?
+      multiple: true
+      options:
+        - Resolume
+        - TouchDesigner
+        - Notch
+        - OBS (Open Broadcaster Software)
+        - Other (please say below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Include any error messages, and roughly when it happened during your set.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: If you can make it happen again, tell us how.
+      placeholder: |
+        1. Start Conduit
+        2. Load a track on deck 2
+        3. ...
+
+  - type: dropdown
+    id: bpm-effects
+    attributes:
+      label: Were any BPM-synced effects active on your mixer at the time?
+      description: Beat FX, echoes and similar effects can change what the players report.
+      options:
+        - "No"
+        - "Yes"
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log file
+      description: |
+        Drag your log file into this box. To find it, use **Help → About → Open log folder**,
+        or paste `%APPDATA%\Gaffware\Conduit` into the File Explorer address bar.
+        Note: logs can include track titles and artist names. Remove anything you'd rather not share publicly.
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Screenshots, a short video, or anything that seems relevant.

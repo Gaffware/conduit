@@ -1,0 +1,32 @@
+name: Feature request
+description: Suggest an idea or improvement for Conduit
+title: "[Feature]: "
+labels: ["feature"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: Describe the situation in your set or show where Conduit falls short.
+    validations:
+      required: true
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like Conduit to do?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: osc-target
+    attributes:
+      label: Which visual software is this for?
+      multiple: true
+      options:
+        - Resolume
+        - TouchDesigner
+        - Notch
+        - OBS (Open Broadcaster Software)
+        - Not specific to one
+        - Other
