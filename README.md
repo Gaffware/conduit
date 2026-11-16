@@ -34,7 +34,7 @@ You'll need a free GitHub account to file an issue. If you'd rather not create o
 
 ## Feedback and contact
 
-General feedback, questions, or bug reports without a GitHub account: **feedback@gaffware.example**
+General feedback, questions, or bug reports without a GitHub account: **conduit@gaffware.com**
 
 ## Credits
 
